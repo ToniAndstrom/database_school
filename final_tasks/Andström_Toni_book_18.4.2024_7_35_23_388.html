@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>tehtävät</title>
+  <style>
+    
+ #valikko button {
+   width: 20em;
+ }
+
+ section > h2, main>h1 {
+   background-color: beige;
+ }
+
+ @media print {
+    #valikko,
+    #syote,
+    #haku,
+    #kaikki,
+    #virhe {
+      page-break-inside: avoid;
+      page-break-after: always;
+      padding: 10px;
+      height: 420px;
+      border: solid grey 1px;
+    }
+
+    #kaikki {
+      height: 1000px;
+    }
+
+    body {
+      font-size: 10pt;
+    }
+    section {
+      page-break-after: always;
+    }
+    section > div:last-of-type{
+      page-break-after:avoid;
+    }
+ }
+
+ @media screen {
+   #valikko,
+   #syote,
+   #haku,
+   #kaikki,
+   #virhe {
+     page-break-inside: avoid;
+     border: solid gray 1px;
+     padding: 1em;
+     margin: 10px;
+     height: 600px;
+   }
+
+   body {
+     font-size: 12pt;
+   }
+ }
+
+
+ ul.taulu {
+   font-family: monospace;
+   font-weight: bold;
+ }
+
+ input {
+   display: inline-block;
+   height: 20px;
+   border: black solid 2px;
+ }
+
+ label {
+   display: inline-block;
+   width: 150px;
+ }
+
+ .lihavointi {
+   font-weight: bold;
+ }
+
+ div {
+   padding: 10px;
+ }
+
+ .iso {
+   font-size: 16pt;
+ }
+
+ h2 .iso {
+   font-size: 24pt;
+ }
+
+ th,
+ td {
+   padding: 10px;
+   text-align: left;
+ }
+
+ .huom {
+   padding: 1em;
+   border: dashed 1px red;
+ }
+
+ .konsolivalikko>ol>li {
+   margin-left:1em;
+   font-family: monospace;
+ }
+
+ pre, .konsolivalikko>ol {
+   width: 70%;
+   padding: 1em;
+   background-color: lightgray;
+   font-weight: bold;
+ }
+
+ .avain {
+   color:blue;
+   font-weight: bold;
+ }
+
+ .arvo{
+   color:red;
+ }
+
+ .olioalku, .olioloppu, .taulukko{
+   font-weight: bold;
+ }
+ .olio{
+   padding-left:1em;
+   padding-top:0;
+   padding-bottom: 0;
+ }
+
+ .rivi{
+   padding:0;
+ }
+
+ .arvo.varchar::before{
+    content: '\0022';
+ }
+ .arvo.varchar::after {
+   content: '\0022';
+ }
+
+ .jsondata {
+   font-family: monospace;
+ }
+
+ table.csvdata {
+   border-collapse: collapse;
+   border: solid 1px black;
+ }
+
+ table.csvdata th {
+   background-color: lightgrey;
+   border-bottom: 1px solid black;
+ }
+
+ table.csvdata td,
+ table.csvdata th {
+   border-right: 1px solid black;
+   border-left: 1px solid black;
+ }
+
+  .xmldata .elementti,
+  .xmldata .elementtiloppu {
+    padding-left: 1em;
+  }
+
+  .xmldata .kentta {
+    padding-left: 2em;
+  }
+  </style>
+</head>
+  <body>
+    <header>Toni Andström</header>
+    <main>
+      <h1> Tasks</h1>
+      <ol>
+      
+          <li>Create a folder for the project</li> 
+      
+          <li>Write create statements for the database</li> 
+      
+          <li>Create the database</li> 
+      
+          <li>Write Sql statements</li> 
+      
+          <li>Submit the project</li> 
+      
+      </ol>
+      
+      
+        <section class="projektinAlustusEN">
+          <h2>1 Create a folder for the project</h2>
+        
+          <div>
+     Create a folder for the project. Name the folder with
+     <strong>Andström_Toni_book_project</strong>.
+  </div>
+  <div>
+    
+  </div>
+  
+  
+  
+        </section>
+      
+        <section class="luontilauseetSqlEN">
+          <h2>2 Write create statements for the database</h2>
+        
+          <div>
+    Write create statements to create a database called
+    <strong><span class="iso">bookdb</span></strong>.
+  </div>
+  <div>Create a table <strong>book</strong>, for
+    book data. Table columns are:
+  </div>
+  <ul class="taulu">
+    
+    <li>
+      bookID
+      integer
+    </li>
+    
+    <li>
+      name
+      varchar(45)
+    </li>
+    
+    <li>
+      author
+      varchar(20)
+    </li>
+    
+    <li>
+      year
+      integer
+    </li>
+    
+    <li>
+      genre
+      varchar(18)
+    </li>
+    
+  </ul>
+  <div>
+     All columns are mandatory. The primary key is <strong>bookID</strong>.
+  </div>
+  <div>
+    Add two insert statements into the create statements for testing.
+  </div>
+  <div>
+    Create user <strong> mia@localhost
+    </strong> with password <strong> rxQqHhYz</strong>.
+    Grant all necessary privileges to the user.
+  </div>
+  
+  <div class="huom">
+    
+    <div>
+      Save all necessary create statements
+      
+      
+      
+      into a sql file
+      <strong>Andström_Toni_book_createStatements.sql</strong>
+      
+    </div>
+    
+  </div>
+        </section>
+      
+        <section class="luoTietokantaEN">
+          <h2>3 Create the database</h2>
+        
+            <div>
+      Create the database with the create statements
+      .
+    </div> 
+        </section>
+      
+        <section class="sqltehtavatEN">
+          <h2>4 Write Sql statements</h2>
+        
+             <div>
+       After each operation check the content of the database by selecting all data from the table.
+     </div>
+    <div>Write sql statements, with which you can 
+      <strong>insert</strong>, <strong>update</strong>, 
+      <strong>delete</strong> and <strong>select</strong> the book data.
+    </div>
+    <div class="huom">Save sql statements into project folder as a sql file named <strong>
+        Andström_Toni_book_sqlStatements.sql</strong>.
+    </div>
+    <h3>Insert data to the database</h3>
+    <div>
+      Insert following data to the <strong>book</strong> database
+    </div>
+    
+      
+
+<div id="haekaikki">
+  <table>
+    <thead>
+      <tr>
+        
+          <th>
+            bookID
+          </th>
+          
+          <th>
+            name
+          </th>
+          
+          <th>
+            author
+          </th>
+          
+          <th>
+            year
+          </th>
+          
+          <th>
+            genre
+          </th>
+          
+      </tr>
+    </thead>
+    </tbody>
+    
+      <tr>
+        
+          <td>
+            3
+          </td>
+          
+          <td>
+            Rebellion of Sophie Q. Lister
+          </td>
+          
+          <td>
+            Matt Wilson
+          </td>
+          
+          <td>
+            2010
+          </td>
+          
+          <td>
+            fiction
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            6
+          </td>
+          
+          <td>
+            Hacking databases
+          </td>
+          
+          <td>
+            Layla Jones
+          </td>
+          
+          <td>
+            2005
+          </td>
+          
+          <td>
+            nonfiction
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            1
+          </td>
+          
+          <td>
+            NoSql - New Hope
+          </td>
+          
+          <td>
+            Isla Shore
+          </td>
+          
+          <td>
+            2012
+          </td>
+          
+          <td>
+            short story
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            2
+          </td>
+          
+          <td>
+            Maria and My
+          </td>
+          
+          <td>
+            Antony Lee
+          </td>
+          
+          <td>
+            2018
+          </td>
+          
+          <td>
+            textbook
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            7
+          </td>
+          
+          <td>
+            The adventures of Mike the Millipede
+          </td>
+          
+          <td>
+            Felix Harris
+          </td>
+          
+          <td>
+            2017
+          </td>
+          
+          <td>
+            humorous essay
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            5
+          </td>
+          
+          <td>
+            Databases - The rise and fall
+          </td>
+          
+          <td>
+            Emily White
+          </td>
+          
+          <td>
+            2011
+          </td>
+          
+          <td>
+            chronic
+          </td>
+          
+      </tr>
+      
+      <tr>
+        
+          <td>
+            4
+          </td>
+          
+          <td>
+            SQL-mysteries
+          </td>
+          
+          <td>
+            Jesse River
+          </td>
+          
+          <td>
+            2000
+          </td>
+          
+          <td>
+            poem
+          </td>
+          
+      </tr>
+      
+        </tbody>
+  </table>
+</div>
+
+  
+    <h3>Getting data</h3>
+    <h4>Select all columns</h4>
+    <div>
+      Create select statement with which you get all data of the books. 
+      All columns should be included in the resultset.
+    </div>
+    <div>
+      Write a select statement, with which you get all data of the books.
+      Include into the resultset only the columns
+      <strong>year</strong>, <strong>name</strong>, <strong>author</strong>.
+    </div>
+    <h4>Select with on</h4>
+    
+    <div>
+      Select all books, where the 
+      <strong>name</strong> is <strong> Rebellion of Sophie Q. Lister</strong>
+    </div>
+    
+    <div>
+      Select all books, where the 
+      <strong>name</strong> is <strong> Hacking databases</strong>
+    </div>
+    
+    <div>
+      Select all books, where the 
+      <strong>year</strong> is <strong> 2012</strong>
+    </div>
+    
+    
+   
+      <h3>Update data</h3>
+      <div class="huom">
+        To see the efect of the operations, you might have to add some new data to the table before executing the operation.
+      </div>
+      
+      <div>
+        Update book
+        (<strong>bookID</strong> is <strong> 4</strong>).
+        New data is:  
+        <strong>year</strong> is <strong> 1990</strong> and <strong>name</strong> is <strong> SQL-mysteries</strong>
+      </div>
+      
+      <div>
+        Update book
+        (<strong>bookID</strong> is <strong> 3</strong>).
+        New data is:  
+        <strong>year</strong> is <strong> 1990</strong> and <strong>genre</strong> is <strong> short story</strong>
+      </div>
+      
+      
+      <div>
+        Update book
+        (<strong>bookID</strong> on <strong> 2</strong>).
+        New data is:
+        <strong>name</strong> is <strong> NoSql - New Hope</strong> and <strong>author</strong> is <strong> Jesse River</strong> and <strong>genre</strong> is <strong> short story</strong>
+      </div>
+      
+      <div>
+        Update book
+        (<strong>bookID</strong> on <strong> 3</strong>).
+        New data is:
+        <strong>genre</strong> is <strong> poem</strong> and <strong>year</strong> is <strong> 2000</strong> and <strong>author</strong> is <strong> Felix Harris</strong>
+      </div>
+      
+   
+       <h3>Delete data</h3>
+       <div class="huom">
+         To see the efect of the operations, you might have to add some new data to the table before executing the
+         operation.
+        </div>
+       
+       <div>
+         Delete book, where <strong>bookID</strong> is <strong>1</strong>
+       </div>
+       
+       <div>
+         Delete book, where <strong>bookID</strong> is <strong>3</strong>
+       </div>
+       
+       <div>
+         Delete all books, where
+         <strong>author</strong> is <strong> Jesse River</strong>
+       </div>
+       <div>
+         Delete all books, where
+         <strong>name</strong> is <strong> Rebellion of Sophie Q. Lister</strong> and <strong>genre</strong> is <strong> humorous essay</strong>
+       </div>
+       <div>
+         Delete all books, where
+         <strong>genre</strong> is <strong> short story</strong> or <strong>name</strong> is <strong> NoSql - New Hope</strong> or <strong>name</strong> is <strong> Hacking databases</strong>
+       </div>
+        </section>
+      
+        <section class="palautusEN">
+          <h2>5 Submit the project</h2>
+        
+          <div>
+    Submit your project folder
+    <strong>Andström_Toni_book_project</strong>
+    acording to instructions given separately.
+     
+    
+  </div>
+  
+  
+
+  
+
+  
+        </section>
+        
+    </main> 
+  </body>
+</html>

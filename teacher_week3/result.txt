@@ -1,0 +1,53 @@
+employeeId	firstname	lastname	department	salary
+1	Matt	River	ict	6655.00
+2	Mary	River	admin	7986.00
+3	Vera	Jones	ict	5989.50
+4	Amanda	Jones	transportation	3993.00
+5	Arthur	Harris	maintenance	3327.50
+6	Vera	Smith	marketing	2751.09
+7	Mary Ann	Smith	ict	4658.50
+8	Mary-Ann	Wilkes	admin	9317.00
+firstname	lastname	department
+Matt	River	ict
+Mary	River	admin
+Vera	Jones	ict
+Amanda	Jones	transportation
+Arthur	Harris	maintenance
+Vera	Smith	marketing
+Mary Ann	Smith	ict
+Mary-Ann	Wilkes	admin
+firstname	lastname	department
+Matt	River	ict
+Mary	River	admin
+Vera	Jones	ict
+Amanda	Jones	transportation
+Arthur	Harris	maintenance
+Vera	Smith	marketing
+Mary Ann	Smith	ict
+Mary-Ann	Wilkes	admin
+numberOfRows
+8
+count(*)
+8
+number of rows
+8
+numOfRows
+8
+NumOfDepts
+8
+numOfSalary
+8
+numOfRows
+8
+missingSalary
+0
+missingSalary
+0
+lessThan5000
+4
+minimum
+2751.09
+maximum
+9317.00
+difference
+6565.91

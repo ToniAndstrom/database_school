@@ -1,0 +1,23 @@
+show databases;
+use persondb;
+select database();
+select @@PORT;
+show tables;
+select * from person;
+select firstname from person;
+select distinct firstname from person;
+select distinct firstname,lastname from person;
+insert into person values(6,'Matt','River',60);
+select * from person;
+select distinct firstname,lastname from person;
+select firstname,lastname from person;
+select id,lastname,firstname,age from person where age>=20 and age<=50;
+select lastname,firstname from person order by lastname asc,firstname asc;
+select lastname,firstname from person order by firstname asc,lastname asc;
+select lastname,firstname from person order by age asc;
+select * from person;
+select * from person where firstname='Matt' and lastname='River';
+select * from person where lastname='Jones' or lastname='Harris';
+select * from person where lastname in ('Jones','Harris');
+select * from person where firstname in('Matt','Mary') and age<30;
+

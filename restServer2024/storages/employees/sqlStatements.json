@@ -1,0 +1,41 @@
+{
+    "getAll":[  "select employeeId, firstname, lastname, department, salary",
+                "from employee"
+    ],
+    "getOne":[
+        "select employeeId, firstname, lastname, department, salary",
+        "from employee where employeeId=?"
+    ],
+    "insert":[
+        "insert into employee (employeeId, firstname, lastname, department, salary)",
+        "values (?,?,?,?,?)"
+    ],
+    "update":[
+        "update employee set firstname=?, lastname=?, department=?,",
+        "salary=? where employeeId=?"
+    ],
+    "remove":["delete from employee where employeeId=?"],
+    "search":{
+        "employeeId":[
+            "select employeeId, firstname, lastname, department, salary",
+            "from employee where employeeId=?"
+        ],
+        "firstname":[
+            "select employeeId, firstname, lastname, department, salary",
+            "from employee where firstname=?"
+        ],
+        "lastname":[
+            "select employeeId, firstname, lastname, department, salary",
+            "from employee where lastname=?"
+        ],
+        "department":[
+            "select employeeId, firstname, lastname, department, salary",
+            "from employee where department=?"
+        ],
+        "salary":[
+            "select employeeId, firstname, lastname, department, salary",
+            "from employee where salary=?"
+        ]
+    },
+    "primary_key":"employeeId"
+}

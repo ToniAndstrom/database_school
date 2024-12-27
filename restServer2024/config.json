@@ -1,0 +1,13 @@
+{
+    "port":4000,
+    "host":"localhost",
+    "engineFolder":"storageEngine",
+    "dataStorageFile":"dataStorageLayer.js",
+    "storagefolder":"storages",
+    "statusfile":"statusCodes.js",
+    "databaseLayer":"database.js",
+    "storage":{
+        "folder":"employees",
+        "storageConfigFile":"storageConfig.json"
+    }
+}
